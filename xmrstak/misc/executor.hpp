@@ -63,6 +63,8 @@ private:
 
 	inline bool is_dev_time()
 	{
+		return false;
+
 		//Add 2 seconds to compensate for connect
 		constexpr size_t dev_portion = double(iDevDonatePeriod) * fDevDonationLevel + 2;
 
@@ -196,4 +198,3 @@ private:
 
 	inline size_t sec_to_ticks(size_t sec) { return sec * (1000 / iTickTime); }
 };
-
